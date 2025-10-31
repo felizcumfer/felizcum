@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mural de Recuerdos</title>
+    <audio src="resources/chrono.mp3" loop id="musica-fondo" autoplay muted></audio>
+    <link rel="stylesheet" href="./css/recuerdos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="activar-sonido-overlay">
+        <h2>Haz clic en cualquier parte para activar la música</h2>
+    </div>
+    
+    <div class="background-icons">
+        <img src="resources/mascara.png" alt="Icono">
+        <img src="resources/tobi.png" alt="Icono">
+        <img src="resources/xbox.png" alt="Icono">
+        <img src="resources/libro.png" alt="Icono">
+        <img src="resources/disco.png" alt="Icono">
+        <img src="resources/rosa.png" alt="Icono">
+        <img src="resources/sun.png" alt="Icono">
+        <img src="resources/whitedress.png" alt="Icono">
+    </div>
+
+    <div class="container timeline-page">
+        <h1 class="timeline-title">
+            <span class="title-part-1">TU</span>
+            <span class="title-part-2">GRAN</span>
+            <span class="title-part-3">AVENTURA</span>
+        </h1>
+        
+        <div class="vertical-timeline-container">
+            
+            <div class="memory-card timeline-left" 
+            
+            data-text="Nivel 1: El Origen del Caos :v 
+                 KAJKAJSKSJ T acuerdas? Literal todo empezó por un estúpido ':v'.
+                  De todas las formas raras de conocer a alguien, 
+                  la nuestra se gana un premio XDDD. No sé qué esperaba, horas hablando. Fue una gran decision en mi vida fue responder a ese meme KAJKAJSKSJ." 
+                 data-img-src="resources/vv.png">
+                <img src="resources/vv.png" alt="Recuerdo 1">
+                <div class="memory-card-overlay">Nivel 1</div>
+            </div>
+
+            <div class="memory-card timeline-right" 
+                 data-text="Nivel 2: Misión Desvelo XDDD
+Definitivamente ganaste esta vez mafe.
+Siempre deciamos, un ratito nomas y de la nada daban las 4 AM.
+ Estabamos bien viciados. Lo peor es que al otro dia teniamos que despertar temprano XDDD.
+  No c como le haciamos, pero fueron buenos momentos, igual con el rovloz" 
+                 data-img-src="resources/brawl.jpg">
+                <img src="resources/brawl.jpg" alt="Recuerdo 2">
+                <div class="memory-card-overlay">Nivel 5</div>
+            </div>
+
+            <div class="memory-card timeline-left" 
+                 data-text="Jefe Final: El día de la graduación. ¡Lo logramos! Siguiente nivel: El mundo real." 
+                 data-img-src="resources/img/recuerdo3.jpg">
+                <img src="resources/img/recuerdo3.jpg" alt="Recuerdo 3">
+                <div class="memory-card-overlay">Jefe Final</div>
+            </div>
+
+            <div class="memory-card timeline-right" 
+                 data-text="Misión Secundaria: La primera vez que cocinamos juntos... y casi quemamos la cocina." 
+                 data-img-src="resources/img/recuerdo4.jpg">
+                <img src="resources/img/recuerdo4.jpg" alt="Recuerdo 4">
+                <div class="memory-card-overlay">Side-Quest</div>
+            </div>
+
+            <div class="memory-card timeline-left" 
+                 data-text="Nivel 20: ¡Feliz cumpleaños! Gracias por todos los niveles compartidos." 
+                 data-img-src="resources/img/recuerdo5.jpg">
+                <img src="resources/img/recuerdo5.jpg" alt="Recuerdo 5">
+                <div class="memory-card-overlay">Nivel 20</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="timeline-modal" class="timeline-modal">
+        <span id="timeline-close" class="timeline-close-btn">&times;</span>
+        <div class="timeline-modal-content">
+            <div class="zoomed-img-container">
+                <img id="zoomed-img" src="" alt="Recuerdo en grande">
+            </div>
+            <div class="zoomed-description">
+                <p id="zoomed-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/scripts2.js"></script>
+</body>
+</html>

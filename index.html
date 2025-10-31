@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños Mafernanda!</title>
+    <link rel="stylesheet" href="./css/styles.css?v=1.2">
+</head>
+<body>
+<audio src="resources/chrono.mp3" loop id="musica-fondo" autoplay muted></audio>
+    <header class="game-screen">
+        
+        <div class="background-icons">
+            <img src="resources/mascara.png" alt="Icono">
+            <img src="resources/tobi.png" alt="Icono">
+            <img src="resources/xbox.png" alt="Icono">
+            <img src="resources/libro.png" alt="Icono">
+            <img src="resources/disco.png" alt="Icono">
+            <img src="resources/rosa.png" alt="Icono">
+            <img src="resources/sun.png" alt="Icono">
+            <img src="resources/whitedress.png" alt="Icono">
+        </div>
+        
+        <div class="container">
+            <h1 class="game-title">Las Aventuras de Mafernanda</h1>
+            <p class="game-subtitle">Nivel 20 - ¡Presiona Start!</p>
+            <div class="button-container">
+                <a href="recuerdos.html" id="btn-start" class="game-button">Start</a>
+                <button id="btn-options" class="game-button">Opciones</button>
+            </div>
+        </div>
+        
+        <p>Hecho con ❤️ por Tobi</p>
+    </header>
+
+    <div id="options-modal" class="modal oculto">
+        <div class="modal-content">
+            <span id="close-modal" class="close-button">&times;</span>
+            <h3>Opciones del Juego</h3>
+            <ul class="options-list">
+                <li><strong>Volumen:</strong> 100% (Siempre alto para ti)</li>
+                <li><strong>Gráficos:</strong> Ultra HD (Como nuestra amistad)</li>
+                <li><strong>Dificultad:</strong> Amistad (Modo Fácil)</li>
+            </ul>
+        </div>
+    </div> 
+
+
+
+    <script src="./js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+
+.seccion {
+    padding: 2rem 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.modal.oculto {
+    display: none;
+}
+
+.oculto {
+    display: none;
+}
+
+.game-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-color: #1a1a2e;
+    color: #ffffff;
+    font-family: 'Press Start 2P', cursive;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.game-screen .container {
+    position: relative;
+    z-index: 2;
+}
+
+.game-title {
+    font-size: 2.5rem;
+    color: #f7b733;
+    text-shadow: 4px 4px 0px #e03f3f;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.game-subtitle {
+    font-size: 1rem;
+    color: #eaeaea;
+    margin-bottom: 2.5rem;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+@media (min-width: 600px) {
+    .button-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .game-title {
+        font-size: 3rem;
+    }
+}
+
+.game-button {
+    display: inline-block;
+    background: #4a4a8f;
+    color: #ffffff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border: 4px solid #ffffff;
+    box-shadow: 6px 6px 0px #000000;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    transition: all 0.1s ease-in-out;
+}
+
+.game-button:hover {
+    background: #e03f3f;
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0px #000000;
+}
+
+.modal {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #fefefe;
+    color: #1a1a2e;
+    padding: 30px;
+    border: 8px solid #4a4a8f;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 10px 10px 0px #000;
+}
+
+.options-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    line-height: 2;
+}
+
+.close-button {
+    color: #e03f3f;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+@keyframes animStar {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-100vh); }
+}
+
+.stars, .stars2, .stars3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.stars {
+    box-shadow: 10px 50px #FFF, 80px 120px #FFF, 200px 30px #FFF, 300px 100px #FFF, 450px 70px #FFF, 600px 150px #FFF, 700px 200px #FFF, 800px 50px #FFF, 900px 100px #FFF, 1000px 170px #FFF, 1100px 30px #FFF, 1200px 80px #FFF, 1300px 130px #FFF, 1400px 180px #FFF, 1500px 50px #FFF, 1600px 120px #FFF, 1700px 10px #FFF, 1800px 100px #FFF, 1900px 40px #FFF;
+    animation: animStar 50s linear infinite;
+}
+
+.stars2 {
+    box-shadow: 15px 65px #EEE, 95px 135px #EEE, 215px 45px #EEE, 315px 115px #EEE, 465px 85px #EEE, 615px 165px #EEE, 715px 215px #EEE, 815px 65px #EEE, 915px 115px #EEE, 1015px 185px #EEE, 1115px 45px #EEE, 1215px 95px #EEE, 1315px 145px #EEE, 1415px 195px #EEE, 1515px 65px #EEE, 1615px 135px #EEE, 1715px 25px #EEE, 1815px 115px #EEE, 1915px 55px #EEE;
+    animation: animStar 100s linear infinite;
+}
+
+.stars3 {
+    box-shadow: 5px 45px #DDD, 75px 105px #DDD, 195px 25px #DDD, 295px 95px #DDD, 445px 65px #DDD, 595px 145px #DDD, 695px 195px #DDD, 795px 45px #DDD, 895px 95px #DDD, 995px 165px #DDD, 1095px 25px #DDD, 1195px 75px #DDD, 1295px 125px #DDD, 1395px 175px #DDD, 1495px 45px #DDD, 1595px 115px #DDD, 1695px 5px #DDD, 1795px 95px #DDD, 1895px 35px #DDD;
+    animation: animStar 150s linear infinite;
+}
+
+.background-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.background-icons img {
+    position: absolute;
+    bottom: -100px;
+    width: 80px;
+    height: auto;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(0); opacity: 0.6; }
+    to { transform: translateY(-110vh); opacity: 0; }
+}
+@keyframes floatSway {
+    0% { transform: translate(0, 0); opacity: 0.6; }
+    50% { transform: translate(40px, -50vh); opacity: 0.5; }
+    100% { transform: translate(-40px, -110vh); opacity: 0; }
+}
+@keyframes floatRotate {
+    from { transform: translateY(0) rotate(0deg); opacity: 0.6; }
+    to { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+
+.background-icons img:nth-child(1) {
+    left: 10%;
+    width: 60px;
+    animation: floatSway 12s linear 0s infinite;
+}
+.background-icons img:nth-child(2) {
+    left: 45%;
+    width: 100px;
+    animation: floatRotate 18s linear 2s infinite;
+}
+.background-icons img:nth-child(3) {
+    left: 70%;
+    width: 70px;
+    animation: floatUp 10s linear 5s infinite;
+}
+.background-icons img:nth-child(4) {
+    left: 85%;
+    width: 90px;
+    animation: floatSway 16s linear 1s infinite;
+}
+.background-icons img:nth-child(5) {
+    left: 25%;
+    width: 85px;
+    animation: floatRotate 13s linear 7s infinite;
+}
+.background-icons img:nth-child(6) {
+    left: 55%;
+    width: 65px;
+    animation: floatUp 11s linear 4s infinite;
+}
+.background-icons img:nth-child(7) {
+    left: 5%;
+    width: 110px;
+    animation: floatSway 17s linear 6s infinite;
+}
+.background-icons img:nth-child(8) {
+    left: 75%;
+    width: 75px;
+    animation: floatRotate 14s linear 9s infinite;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 1rem;
+    color: #777;
+    background-color: #f4f4f4;
+}
