@@ -7,6 +7,10 @@
     <audio src="resources/chrono.mp3" loop id="musica-fondo" autoplay muted></audio>
     <link rel="stylesheet" href="./css/recuerdos.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
 </head>
 <body>
     <div id="activar-sonido-overlay">
@@ -34,11 +38,10 @@
         <div class="vertical-timeline-container">
             
             <div class="memory-card timeline-left" 
-            
-            data-text="Nivel 1: El Origen del Caos :v 
-                 KAJKAJSKSJ T acuerdas? Literal todo empezó por un estúpido ':v'.
-                  De todas las formas raras de conocer a alguien, 
-                  la nuestra se gana un premio XDDD. No sé qué esperaba, horas hablando. Fue una gran decision en mi vida fue responder a ese meme KAJKAJSKSJ." 
+                 data-text="Nivel 1: El Origen del Caos :v 
+                     KAJKAJSKSJ T acuerdas? Literal todo empezó por un estúpido ':v' hace como 4-5 años ya.
+                      Y de todas las formas raras de conocer a alguien, 
+                      la nuestra se gana un premio XDDD. No sé qué esperaba, horas hablando. Fue una gran decision en mi vida fue responder a ese meme KAJKAJSKSJ." 
                  data-img-src="resources/vv.png">
                 <img src="resources/vv.png" alt="Recuerdo 1">
                 <div class="memory-card-overlay">Nivel 1</div>
@@ -56,27 +59,39 @@ Siempre deciamos, un ratito nomas y de la nada daban las 4 AM.
             </div>
 
             <div class="memory-card timeline-left" 
-                 data-text="Jefe Final: El día de la graduación. ¡Lo logramos! Siguiente nivel: El mundo real." 
-                 data-img-src="resources/img/recuerdo3.jpg">
-                <img src="resources/img/recuerdo3.jpg" alt="Recuerdo 3">
-                <div class="memory-card-overlay">Jefe Final</div>
+                 data-text="Complejidad...  
+                  Se que has pasado por situaciones complicadas, distintos retos que hacen dudar sobre seguir adelante, sin embargo lo supiste
+                  sobrellevar cada una de esas veces, y no es algo que cualquiera pueda hacer, y realmente me siento orgulloso de ti por eso, y recuerda
+                  que no estas y nunca estaras sola mafe" 
+                 data-img-src="resources/tovis.jpeg">
+                <img src="resources/tovis.jpeg" alt="Recuerdo 3">
+                <div class="memory-card-overlay">Pese a dificultades</div>
             </div>
 
             <div class="memory-card timeline-right" 
-                 data-text="Misión Secundaria: La primera vez que cocinamos juntos... y casi quemamos la cocina." 
-                 data-img-src="resources/img/recuerdo4.jpg">
-                <img src="resources/img/recuerdo4.jpg" alt="Recuerdo 4">
-                <div class="memory-card-overlay">Side-Quest</div>
+                 data-text="Pese a todo, sigues esforzandote por lo que te gusta, y eso me gusta de ti, eres una chica con sueños y metas, quizas
+                 a veces te descarriles o te cansas, pero lo que es realmente importante es seguir adelante despues de todo...:)" 
+                 data-img-src="resources/texto.jpg">
+                <img src="resources/texto.jpg" alt="Recuerdo 4">
+                <div class="memory-card-overlay">Esfuerzo Dia con Dia</div>
             </div>
 
             <div class="memory-card timeline-left" 
-                 data-text="Nivel 20: ¡Feliz cumpleaños! Gracias por todos los niveles compartidos." 
-                 data-img-src="resources/img/recuerdo5.jpg">
-                <img src="resources/img/recuerdo5.jpg" alt="Recuerdo 5">
-                <div class="memory-card-overlay">Nivel 20</div>
+                 data-text="Y aun asi, hasta el final siempre habra bonitas cosas, bonitas cosas que debes disfrutar por ti, y por las personas que tiene en su 
+                 corazon..." 
+                 data-img-src="resources/playa.jpeg">
+                <img src="resources/playa.jpeg" alt="Recuerdo 5">
+                <div class="memory-card-overlay">Recuerda lo bonito</div>
             </div>
 
         </div>
+
+        <div class="final-button-container">
+            <button id="final-button" class="locked-button">
+                🔒 Bloqueado
+            </button>
+        </div>
+
     </div>
 
     <div id="timeline-modal" class="timeline-modal">
