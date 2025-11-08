@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
             Swal.fire({
                 title: '¡Tesoro Desbloqueado!',
                 text: 'Feliz Nivel 20, Mafer. Eres una persona increíble. Gracias por cada nivel, cada desvelo y cada risa. Significa mucho para mí. - Tobi ❤️',
-                imageUrl: 'resources/tovis.jpeg',
+                imageUrl: './resources/tobi.jpeg',
                 imageWidth: 200,
                 imageHeight: 200,
                 imageAlt: 'Foto de Tobi',
